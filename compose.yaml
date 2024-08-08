@@ -3,9 +3,10 @@ services:
     build:
       dockerfile: Dockerfile
     image: wiseflow:latest
+    restart: unless-stopped  # 添加自动重启策略
     # set following as you need
-    # environment:
-      # - TZ=Asia/Shanghai
+    environment:
+      - TZ=Asia/Shanghai
       # - LANG=zh_CN.UTF-8
       # - LC_ALL=zh_CN.UTF-8
     tty: true
